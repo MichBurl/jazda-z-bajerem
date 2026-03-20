@@ -42,7 +42,7 @@ export default function Hero() {
                   </svg>
                 </span>
               </h1>
-              <p className="text-white/80 text-lg md:text-xl lg:text-xl max-w-2xl leading-relaxed">
+              <p className="text-white/60 text-lg md:text-xl lg:text-xl max-w-2xl leading-relaxed">
                 Egzamin z nami to pestka, uczymy szybko i bezstresowo. 
                 Gwarantujemy <span className="text-white font-bold">3 jazdy w tygodniu</span> i szkolenie na płycie poślizgowej.
               </p>
@@ -83,6 +83,7 @@ export default function Hero() {
               alt="Maskotka Bajer"
               fill
               className="object-contain drop-shadow-[0_0_80px_rgba(230,32,32,0.25)] select-none pointer-events-none"
+              priority
             />
           </motion.div>
         </div>

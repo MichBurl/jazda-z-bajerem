@@ -48,7 +48,7 @@ export default function Features() {
             </div>
             
             <div className="mb-4">
-              <span className="text-xs font-heading font-bold text-asphalt-900/40 uppercase tracking-widest block mb-1">
+              <span className="text-xs font-heading font-bold text-asphalt-900/60 uppercase tracking-widest block mb-1">
                 Problem: {feature.problem}
               </span>
               <h3 className="text-2xl font-heading font-black text-asphalt-900 uppercase">
@@ -56,7 +56,7 @@ export default function Features() {
               </h3>
             </div>
             
-            <p className="text-asphalt-900/70 leading-relaxed font-body">
+            <p className="text-asphalt-900/90 leading-relaxed font-body">
               {feature.description}
             </p>
             

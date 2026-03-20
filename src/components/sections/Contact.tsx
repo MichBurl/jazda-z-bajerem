@@ -51,7 +51,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-heading font-bold text-asphalt-900 text-sm uppercase mb-2">Biuro</h4>
                   <p className="text-asphalt-900/60 font-body">Pn - Pt: 08:30 - 15:00</p>
-                  <p className="text-xs text-asphalt-900/40 mt-1 italic">* Prosimy o kontakt przed wizytą</p>
+                  <p className="text-xs text-asphalt-900/60 mt-1 italic">* Prosimy o kontakt przed wizytą</p>
                 </div>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function Contact() {
               Wyślij wiadomość
             </Button>
             
-            <p className="text-[10px] text-asphalt-900/30 text-center leading-relaxed">
+            <p className="text-[10px] text-asphalt-900/50 text-center leading-relaxed">
               Klikając wyślij, akceptujesz naszą politykę prywatności. Twoje dane są bezpieczne i zostaną użyte wyłącznie do kontaktu w sprawie szkoły jazdy.
             </p>
           </form>

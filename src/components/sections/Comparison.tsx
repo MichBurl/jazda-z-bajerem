@@ -45,7 +45,7 @@ export default function Comparison() {
           className="space-y-6"
         >
           <div className="p-4 bg-white/5 border-l-4 border-white/20 mb-8">
-            <h3 className="text-2xl font-heading font-black text-white/40 uppercase tracking-widest flex items-center gap-4">
+            <h3 className="text-2xl font-heading font-black text-white/60 uppercase tracking-widest flex items-center gap-4">
               <X className="w-8 h-8 text-racing-red" />
               "Typowa" Szkoła
             </h3>
@@ -55,7 +55,7 @@ export default function Comparison() {
             {COMPARISON_DATA.map((item, index) => (
               <div key={index} className="p-6 bg-asphalt-800 border-l border-white/5 group hover:bg-white/5 transition-colors">
                 <h4 className="font-heading font-black text-white/60 text-xs uppercase tracking-widest mb-2">{item.feature}</h4>
-                <p className="text-white/40 font-body italic flex items-start gap-3">
+                <p className="text-white/60 font-body italic flex items-start gap-3">
                   <X className="w-5 h-5 text-racing-red shrink-0 mt-1" />
                   <span>{item.typical}</span>
                 </p>

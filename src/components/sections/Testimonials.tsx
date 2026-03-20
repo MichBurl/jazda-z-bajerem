@@ -99,7 +99,7 @@ export default function Testimonials() {
                   <span className="font-heading font-bold text-white uppercase tracking-wider text-sm">
                     {review.name}
                   </span>
-                  <span className="text-[10px] text-white/30 uppercase tracking-widest font-bold">Zweryfikowany kursant</span>
+                  <span className="text-[10px] text-white/60 uppercase tracking-widest font-bold">Zweryfikowany kursant</span>
                 </div>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Testimonials() {
                 <Star key={i} className="w-4 h-4 text-premium-gold fill-premium-gold" />
               ))}
             </div>
-            <p className="text-white/40 text-sm italic group-hover:text-premium-gold transition-colors">
+            <p className="text-white/60 text-sm italic group-hover:text-premium-gold transition-colors">
               (Google Maps: 5.0/5 gwiazdek)
             </p>
           </div>

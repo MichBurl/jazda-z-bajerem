@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="relative w-24 h-24">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Logo Jazda z Bajerem"
                 fill
                 className="object-contain"
@@ -25,16 +25,16 @@ export default function Footer() {
               <a href="tel:+48572303572" className="text-white font-heading font-black text-xl hover:text-racing-red transition-colors">572 303 572</a>
             </div>
             <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/szkola.jazdy.bajer.krakow" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-racing-red transition-colors">
+              <a href="https://www.facebook.com/szkola.jazdy.bajer.krakow" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/bajer_intercontinental_jazda" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-racing-red transition-colors">
+              <a href="https://www.instagram.com/bajer_intercontinental_jazda" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
               </a>
-              <a href="https://tiktok.com/@bajer_intercontinental" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-racing-red transition-colors">
+              <a href="https://tiktok.com/@bajer_intercontinental" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="TikTok">
                 <Video size={20} />
               </a>
-              <a href="https://youtube.com/%40BajerIntercontinental" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-racing-red transition-colors">
+              <a href="https://youtube.com/%40BajerIntercontinental" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="YouTube">
                 <Youtube size={20} />
               </a>
             </div>
@@ -111,13 +111,13 @@ export default function Footer() {
                 <p>08:30 - 15:00</p>
               </div>
             </div>
-            <p className="text-xs text-white/40 italic">
+            <p className="text-xs text-white/60 italic">
               * Nie zawsze jesteśmy na miejscu, prosimy o kontakt telefoniczny przed wizytą.
             </p>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Bajer Szkoła Jazdy. Wszelkie prawa zastrzeżone.</p>
           <div className="flex items-center gap-6">
             <Link href="#" className="hover:text-white transition-colors">Polityka Prywatności</Link>

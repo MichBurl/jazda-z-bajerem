@@ -50,7 +50,7 @@ export default function Navbar() {
         >
           <div className="relative w-16 h-16 md:w-20 md:h-20">
             <Image 
-              src="/images/logo.png" 
+              src="/images/logo.webp" 
               alt="Logo" 
               fill
               className="object-contain"
@@ -105,6 +105,7 @@ export default function Navbar() {
         <button 
           className="absolute top-6 right-6 text-white p-2"
           onClick={() => setIsOpen(false)}
+          aria-label="Zamknij menu"
         >
           <X size={40} />
         </button>
