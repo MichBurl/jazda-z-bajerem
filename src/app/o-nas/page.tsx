@@ -19,7 +19,7 @@ export default function AboutUs() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/jazda-z-bajerem/images/2-scaled.jpg"
+            src="/images/2-scaled.jpg"
             alt="Nasza pasja do jazdy"
             fill
             className="object-cover opacity-20 grayscale"
@@ -59,7 +59,7 @@ export default function AboutUs() {
           </div>
           <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border-4 border-white">
             <Image
-              src="/jazda-z-bajerem/images/2-scaled.jpg"
+              src="/images/2-scaled.jpg"
               alt="Jazda z pasją"
               fill
               className="object-cover"

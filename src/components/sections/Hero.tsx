@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/jazda-z-bajerem/images/lusterko1.jpg"
+          src="/images/lusterko1.jpg"
           alt="Lusterko nauki jazdy"
           fill
           className="object-cover opacity-30 grayscale"
@@ -79,7 +79,7 @@ export default function Hero() {
             className="absolute top-1/2 lg:top-[55%] xl:top-[60%] -translate-y-1/2 right-0 w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] hidden lg:block"
           >
             <Image
-              src="/jazda-z-bajerem/images/logo_small.webp"
+              src="/images/logo_small.webp"
               alt="Maskotka Bajer"
               fill
               className="object-contain drop-shadow-[0_0_80px_rgba(230,32,32,0.25)] select-none pointer-events-none"

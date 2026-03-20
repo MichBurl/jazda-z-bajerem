@@ -50,7 +50,7 @@ export default function Navbar() {
         >
           <div className="relative w-16 h-16 md:w-20 md:h-20">
             <Image 
-              src="/jazda-z-bajerem/images/logo.png" 
+              src="/images/logo.png" 
               alt="Logo" 
               fill
               className="object-contain"
@@ -71,7 +71,8 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/zaloguj"
+            href="#"
+            target="_blank"
             className="font-heading font-bold text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors"
           >
             Zaloguj
@@ -119,7 +120,8 @@ export default function Navbar() {
           </Link>
         ))}
         <Link
-          href="/zaloguj"
+          href="#"
+          target="_blank"
           onClick={() => setIsOpen(false)}
           className="font-heading font-black text-xl uppercase text-white/50"
         >
