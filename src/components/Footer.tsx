@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="relative w-24 h-24">
               <Image
-                src="/images/logo.png"
+                src="/jazda-z-bajerem/images/logo.png"
                 alt="Logo Jazda z Bajerem"
                 fill
                 className="object-contain"

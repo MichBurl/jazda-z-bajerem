@@ -50,7 +50,7 @@ export default function Navbar() {
         >
           <div className="relative w-16 h-16 md:w-20 md:h-20">
             <Image 
-              src="/images/logo.png" 
+              src="/jazda-z-bajerem/images/logo.png" 
               alt="Logo" 
               fill
               className="object-contain"
