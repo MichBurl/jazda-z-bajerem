@@ -1,0 +1,42 @@
+Szkoła Jazdy Kraków Bajer (Struktura Strony)
+│
+├── 🏠 Strona Główna (Home)
+│   ├── Sekcja Hero (Główny nagłówek i CTA)
+│   ├── Problemy i Rozwiązania (Nasze cechy)
+│   │   ├── 3 jazdy tygodniowo
+│   │   ├── Ekstremalne umiejętności (Troleje)
+│   │   └── Rozpracujemy Kraków razem
+│   ├── Czym się różnimy (Tabela porównawcza)
+│   ├── Poznaj nasz zespół (Andrzej, Joanna, Dawid)
+│   ├── Opinie Google
+│   └── Sekcja CTA (Przestań prosić o podwózkę)
+│
+├── 💰 Cennik
+│   ├── Sekcja Hero (Inwestycja w pewność siebie)
+│   ├── Kategoria B (Samochody osobowe)
+│   ├── Kategorie Motocyklowe (Promocja, Kat. A, A1, A2)
+│   ├── Doskonalenie Techniki Jazdy (Płyta poślizgowa)
+│   └── Opis Kursów (Wymagania, wiek, czas trwania dla A1, A, B)
+│
+├── ℹ️ O nas
+│   ├── Sekcja Hero (Nie produkujemy kierowców z taśmy)
+│   ├── Nasza historia i filozofia
+│   ├── Dlaczego My? (Zalety, Raty 0%, Aplikacja)
+│   ├── Szczegóły Zespołu (Instruktorzy i Biuro)
+│   └── Procedura krok po kroku (Jak zacząć)
+│
+├── 📞 Kontakt
+│   ├── Dane kontaktowe (Telefony, E-mail, Adres)
+│   ├── Godziny otwarcia biura
+│   ├── Dane do przelewu (Nr konta)
+│   └── Vouchery Podarunkowe (Informacje i jak zamówić)
+│
+├── 🔒 Zaloguj (Zewnętrzny link do systemu/aplikacji)
+│
+├── 🇬🇧 Zmiana języka (Przełączenie na wersję angielską)
+│
+└── 🦶 Stopka (Wspólna dla całej witryny)
+    ├── Dane kontaktowe i godziny
+    ├── Linki nawigacyjne (Menu)
+    ├── Ikony Social Media
+    └── Dokumenty (Polityka Prywatności, Regulamin, Standardy)
