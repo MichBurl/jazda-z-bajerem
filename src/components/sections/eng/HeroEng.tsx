@@ -11,7 +11,7 @@ export default function HeroEng() {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/eng-images/hero-eng.webp"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/eng-images/hero-eng.webp`}
           alt="Driving lessons background"
           fill
           className="object-cover opacity-30 grayscale"

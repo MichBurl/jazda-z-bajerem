@@ -25,7 +25,9 @@ export default function Navbar() {
   
   const isEn = pathname.startsWith('/en');
   const NAV_LINKS = isEn ? EN_LINKS : PL_LINKS;
-  const logoSrc = isEn ? "/images/eng-images/logo-eng.webp" : "/images/logo.webp";
+  
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const logoSrc = isEn ? `${basePath}/images/eng-images/logo-eng.webp` : `${basePath}/images/logo.webp`;
 
   useEffect(() => {
     const handleScroll = () => {
