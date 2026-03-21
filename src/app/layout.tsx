@@ -37,6 +37,27 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Inline Critical CSS for LCP and Theme */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          :root {
+            --color-asphalt-900: #111111;
+            --color-racing-red: #E62020;
+            --color-off-white: #FAF9F6;
+          }
+          body {
+            background-color: var(--color-asphalt-900);
+            color: var(--color-off-white);
+            margin: 0;
+            padding: 0;
+          }
+          .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+          }
+          @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+        `}} />
       </head>
       <body className="min-h-full flex flex-col font-body bg-off-white text-asphalt-900">
         <Navbar />

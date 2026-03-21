@@ -1,14 +1,15 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Button from "../Button";
-import { ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Button from '@/components/Button';
+import { ChevronRight } from 'lucide-react';
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-asphalt-900 px-4 md:px-6">
-      {/* Background Image Overlay */}
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-asphalt-900">
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lusterko1.jpg`}
@@ -22,17 +23,13 @@ export default function Hero() {
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="lg:max-w-3xl"
-          >
+          <div className="lg:max-w-3xl">
             <div className="mb-12 text-center lg:text-left">
               <span className="inline-block font-heading font-black text-racing-red uppercase tracking-[0.3em] text-sm md:text-base mb-6 border-l-4 border-racing-red pl-4">
                 Szkoła Prawa Jazdy Kraków
               </span>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-[0.9] mb-8 uppercase italic tracking-tighter">
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-[0.9] mb-8 uppercase italic tracking-tighter opacity-0 animate-[fade-in-up_0.8s_ease-out_forwards]">
                 SZKOŁA JAZDY<br />
                 <span className="text-transparent stroke-text">KRAKÓW</span> <span className="text-racing-red relative">
                   BAJER
@@ -41,13 +38,19 @@ export default function Hero() {
                   </svg>
                 </span>
               </h1>
-              <p className="text-white/60 text-lg md:text-xl lg:text-xl max-w-2xl leading-relaxed">
+
+              <p className="text-white/60 text-lg md:text-xl lg:text-xl max-w-2xl leading-relaxed opacity-0 animate-[fade-in-up_0.8s_ease-out_0.2s_forwards]">
                 Egzamin z nami to pestka, uczymy szybko i bezstresowo. 
                 Gwarantujemy <span className="text-white font-bold">3 jazdy w tygodniu</span> i szkolenie na płycie poślizgowej.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 sm:items-center"
+            >
               <div className="md:hidden w-full space-y-3">
                 <Button href="#kontakt" size="md" className="w-full">
                   Zapisz się teraz
@@ -57,7 +60,8 @@ export default function Hero() {
                   Dowiedz się więcej
                 </Button>
               </div>
-              <div className="hidden md:flex gap-4 items-center">
+              
+              <div className="hidden md:flex gap-4">
                 <Button href="#kontakt" size="lg">
                   Zapisz się teraz
                 </Button>
@@ -66,25 +70,21 @@ export default function Hero() {
                   Dowiedz się więcej
                 </Button>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
           
-          {/* Mascot in Hero - Adjusted Right Placement */}
-          <motion.div 
-            initial={{ scale: 0.5, opacity: 0, x: 100 }}
-            whileInView={{ scale: 1, opacity: 1, x: 0 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 80 }}
-            viewport={{ once: true }}
-            className="absolute top-1/2 lg:top-[55%] xl:top-[60%] -translate-y-1/2 right-0 w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] hidden lg:block"
-          >
+          {/* Mascot Image - Optimized LCP */}
+          <div className="hidden lg:block absolute bottom-0 right-0 w-1/2 h-[85%] z-0 pointer-events-none">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo_small.webp`}
               alt="Maskotka Bajer"
               fill
               className="object-contain drop-shadow-[0_0_80px_rgba(230,32,32,0.25)] select-none pointer-events-none"
               priority
+              placeholder="blur"
+              blurDataURL="data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAQCdASoIAAUAAUAmJaQAA3AA/v8gAAA="
             />
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -101,4 +101,6 @@ export default function Hero() {
       `}</style>
     </section>
   );
-}
+};
+
+export default Hero;
