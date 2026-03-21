@@ -134,7 +134,7 @@ export default function Navbar() {
         <button 
           className="absolute top-6 right-6 text-white p-2"
           onClick={() => setIsOpen(false)}
-          aria-label="Zamknij menu"
+          aria-label={isEn ? "Close menu" : "Zamknij menu"}
         >
           <X size={40} />
         </button>

@@ -61,16 +61,16 @@ export default function Footer() {
               <a href="tel:+48572303572" className="text-white font-heading font-black text-xl hover:text-racing-red transition-colors">572 303 572</a>
             </div>
             <div className="flex items-center gap-4">
-              <a href="https://www.facebook.com/szkola.jazdy.bajer.krakow" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/szkola.jazdy.bajer.krakow" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Odwiedź nasz profil na Facebooku">
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/bajer_intercontinental_jazda" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/bajer_intercontinental_jazda" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Obserwuj nas na Instagramie">
                 <Instagram size={20} />
               </a>
-              <a href="https://tiktok.com/@bajer_intercontinental" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="TikTok">
+              <a href="https://tiktok.com/@bajer_intercontinental" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Zobacz nasze filmy na TikTok">
                 <Video size={20} />
               </a>
-              <a href="https://youtube.com/%40BajerIntercontinental" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="YouTube">
+              <a href="https://youtube.com/%40BajerIntercontinental" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-racing-red transition-colors" aria-label="Subskrybuj nasz kanał na YouTube">
                 <Youtube size={20} />
               </a>
             </div>

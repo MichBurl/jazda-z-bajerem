@@ -34,6 +34,10 @@ export default function RootLayout({
       lang="pl"
       className={`${montserrat.variable} ${inter.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="min-h-full flex flex-col font-body bg-off-white text-asphalt-900">
         <Navbar />
         <div className="flex-grow">
