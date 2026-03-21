@@ -83,11 +83,11 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#"
+            href="https://prawko.pl/osk/bajer/app#/news"
             target="_blank"
             className="font-heading font-bold text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors"
           >
-            {isEn ? "Login" : "Zaloguj"}
+            BizPrawko
           </Link>
           <Link
             href={isEn ? "/en/#kontakt" : "/#kontakt"}
@@ -150,12 +150,12 @@ export default function Navbar() {
           </Link>
         ))}
         <Link
-          href="#"
+          href="https://prawko.pl/osk/bajer/app#/news"
           target="_blank"
           onClick={() => setIsOpen(false)}
           className="font-heading font-black text-xl uppercase text-white/50"
         >
-          {isEn ? "Login" : "Zaloguj"}
+          BizPrawko
         </Link>
         <Link
           href={isEn ? "/en/#kontakt" : "/#kontakt"}
