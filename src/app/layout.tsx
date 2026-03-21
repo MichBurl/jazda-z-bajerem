@@ -58,8 +58,17 @@ export default function RootLayout({
             to { opacity: 1; transform: translateY(0); }
           }
         `}} />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.onload = function() {
+            document.querySelectorAll('link[rel="stylesheet"]').forEach(function(link) {
+              if (link.href.indexOf('static/css') > -1) {
+                link.setAttribute('media', 'all');
+              }
+            });
+          };
+        `}} />
       </head>
-      <body className="min-h-full flex flex-col font-body bg-off-white text-asphalt-900">
+      <body className="min-h-full flex flex-col font-body bg-asphalt-900 text-off-white">
         <Navbar />
         <div className="flex-grow">
           {children}
