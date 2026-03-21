@@ -11,7 +11,7 @@ export default function CTA() {
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={`${basePath}/images/lusterko1.jpg`}
+          src={`${basePath}/images/lusterko1.webp`}
           alt="Twoja droga do prawa jazdy"
           fill
           className="object-cover opacity-20 grayscale"

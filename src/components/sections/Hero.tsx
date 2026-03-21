@@ -12,7 +12,7 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lusterko1.jpg`}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lusterko1.webp`}
           alt="Lusterko nauki jazdy"
           fill
           className="object-cover opacity-30 grayscale"
@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
           
           {/* Mascot Image - Optimized LCP */}
-          <div className="hidden lg:block absolute bottom-0 right-0 w-1/2 h-[85%] z-0 pointer-events-none">
+          <div className="hidden lg:block absolute -bottom-12 -right-72 w-[90%] h-[126%] z-0 pointer-events-none">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo_small.webp`}
               alt="Maskotka Bajer"

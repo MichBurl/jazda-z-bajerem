@@ -12,7 +12,7 @@ const HeroEng = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lusterko1.jpg`}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lusterko1.webp`}
           alt="Driving lesson mirror"
           fill
           className="object-cover opacity-30 grayscale"

@@ -60,7 +60,7 @@ export default function AboutUs() {
           </div>
           <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border-4 border-white">
             <Image
-              src={`${basePath}/images/2-scaled.jpg`}
+              src={`${basePath}/images/2-scaled.webp`}
               alt="Jazda z pasją"
               fill
               className="object-cover"
