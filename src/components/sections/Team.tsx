@@ -47,7 +47,7 @@ export default function Team() {
             viewport={{ once: true }}
             className="flex flex-col items-center text-center group"
           >
-            <div className="relative w-48 h-48 md:w-64 md:h-64 mb-8">
+            <div className="relative w-40 h-40 md:w-56 md:h-56 mb-8">
               {/* Circular mask and border animation */}
               <div className="absolute inset-0 rounded-full border-4 border-racing-red/10 group-hover:border-racing-red transition-colors duration-500 scale-105" />
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">

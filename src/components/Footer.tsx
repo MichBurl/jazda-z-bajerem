@@ -1,8 +1,43 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Instagram, Youtube, Video, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isEn = pathname.startsWith('/en');
+
+  const content = {
+    tagline: isEn 
+      ? '"We don\'t just drive with you, we create it with you." Experts in fast courses and safe driving in Krakow.'
+      : '"Nie jeździmy z Wami, my z Wami to tworzymy." Eksperci od szybkich kursów i bezpiecznej jazdy w Krakowie.',
+    hotline: isEn ? "Hotline" : "Infolinia",
+    quickLinks: isEn ? "Quick Links" : "Na skróty",
+    contact: isEn ? "Contact" : "Kontakt",
+    office: isEn ? "Office" : "Biuro",
+    officeNote: isEn 
+      ? "* We are not always on-site, please contact us by phone before visiting."
+      : "* Nie zawsze jesteśmy na miejscu, prosimy o kontakt telefoniczny przed wizytą.",
+    rights: isEn 
+      ? `© ${new Date().getFullYear()} Bajer Driving School. All rights reserved.`
+      : `© ${new Date().getFullYear()} Bajer Szkoła Jazdy. Wszelkie prawa zastrzeżone.`,
+    links: isEn 
+      ? [
+          { name: "Pricing", href: "/en/cennik" },
+          { name: "About us", href: "/en/o-nas" },
+          { name: "Sign up", href: "/en/#kontakt" },
+        ]
+      : [
+          { name: "Cennik", href: "/cennik" },
+          { name: "O nas", href: "/o-nas" },
+          { name: "Zapisz się", href: "/#kontakt" },
+        ]
+  };
+
+  const logoSrc = isEn ? "/images/eng-images/logo-eng.webp" : "/images/logo.webp";
+
   return (
     <footer className="bg-asphalt-900 text-white pt-16 pb-8 border-t border-white/5">
       <div className="container mx-auto px-4 md:px-6">
@@ -11,17 +46,17 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="relative w-24 h-24">
               <Image
-                src="/images/logo.webp"
-                alt="Logo Jazda z Bajerem"
+                src={logoSrc}
+                alt="Logo"
                 fill
                 className="object-contain"
               />
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs font-body italic">
-              "Nie jeździmy z Wami, my z Wami to tworzymy." Eksperci od szybkich kursów i bezpiecznej jazdy w Krakowie.
+              {content.tagline}
             </p>
             <div className="flex flex-col gap-2 mb-6">
-              <span className="text-xs uppercase tracking-widest text-white/30 font-bold">Infolinia</span>
+              <span className="text-xs uppercase tracking-widest text-white/30 font-bold">{content.hotline}</span>
               <a href="tel:+48572303572" className="text-white font-heading font-black text-xl hover:text-racing-red transition-colors">572 303 572</a>
             </div>
             <div className="flex items-center gap-4">
@@ -43,31 +78,23 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-heading font-bold uppercase tracking-widest text-sm mb-6 text-racing-red">
-              Na skróty
+              {content.quickLinks}
             </h4>
             <ul className="space-y-4">
-              <li>
-                <Link href="/cennik" className="text-white/60 hover:text-white transition-colors text-sm">
-                  Cennik
-                </Link>
-              </li>
-              <li>
-                <Link href="/o-nas" className="text-white/60 hover:text-white transition-colors text-sm">
-                  O nas
-                </Link>
-              </li>
-              <li>
-                <Link href="/#kontakt" className="text-white/60 hover:text-white transition-colors text-sm">
-                  Zapisz się
-                </Link>
-              </li>
+              {content.links.map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
             <h4 className="font-heading font-bold uppercase tracking-widest text-sm mb-6 text-racing-red">
-              Kontakt
+              {content.contact}
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
@@ -102,27 +129,26 @@ export default function Footer() {
           {/* Office Hours */}
           <div>
             <h4 className="font-heading font-bold uppercase tracking-widest text-sm mb-6 text-racing-red">
-              Biuro
+              {content.office}
             </h4>
             <div className="flex items-start gap-3 mb-4">
               <Clock size={18} className="text-premium-gold shrink-0 mt-0.5" />
               <div className="text-sm text-white/60">
-                <p className="font-bold text-white mb-1">Pn - Pt</p>
+                <p className="font-bold text-white mb-1">{isEn ? "Mon - Fri" : "Pn - Pt"}</p>
                 <p>08:30 - 15:00</p>
               </div>
             </div>
             <p className="text-xs text-white/60 italic">
-              * Nie zawsze jesteśmy na miejscu, prosimy o kontakt telefoniczny przed wizytą.
+              {content.officeNote}
             </p>
           </div>
         </div>
 
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
-          <p>© {new Date().getFullYear()} Bajer Szkoła Jazdy. Wszelkie prawa zastrzeżone.</p>
+          <p>{content.rights}</p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-white transition-colors">Polityka Prywatności</Link>
-            <Link href="#" className="hover:text-white transition-colors">Regulamin</Link>
-            <Link href="#" className="hover:text-white transition-colors">Standardy Ochrony Małoletnich</Link>
+            <Link href="#" className="hover:text-white transition-colors">{isEn ? "Privacy Policy" : "Polityka Prywatności"}</Link>
+            <Link href="#" className="hover:text-white transition-colors">{isEn ? "Terms" : "Regulamin"}</Link>
           </div>
         </div>
       </div>

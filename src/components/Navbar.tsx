@@ -6,16 +6,26 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
-const NAV_LINKS = [
+const PL_LINKS = [
   { name: "O NAS", href: "/o-nas" },
   { name: "OFERTA", href: "/#oferta" },
   { name: "CENNIK", href: "/cennik" },
+];
+
+const EN_LINKS = [
+  { name: "ABOUT", href: "/en/o-nas" },
+  { name: "SERVICES", href: "/en/#oferta" },
+  { name: "PRICING", href: "/en/cennik" },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  
+  const isEn = pathname.startsWith('/en');
+  const NAV_LINKS = isEn ? EN_LINKS : PL_LINKS;
+  const logoSrc = isEn ? "/images/eng-images/logo-eng.webp" : "/images/logo.webp";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +44,7 @@ export default function Navbar() {
     }
   }, [isOpen]);
 
-  const isHome = pathname === "/";
+  const isHome = pathname === "/" || pathname === "/en";
   const navBg = (!isHome || scrolled) 
     ? "bg-asphalt-900 py-4 shadow-2xl border-b border-white/5" 
     : "bg-transparent py-6";
@@ -45,12 +55,12 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link 
-          href="/" 
+          href={isEn ? "/en" : "/"} 
           className="relative block"
         >
           <div className="relative w-16 h-16 md:w-20 md:h-20">
             <Image 
-              src="/images/logo.webp" 
+              src={logoSrc} 
               alt="Logo" 
               fill
               className="object-contain"
@@ -75,14 +85,31 @@ export default function Navbar() {
             target="_blank"
             className="font-heading font-bold text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors"
           >
-            Zaloguj
+            {isEn ? "Login" : "Zaloguj"}
           </Link>
           <Link
-            href="/#kontakt"
+            href={isEn ? "/en/#kontakt" : "/#kontakt"}
             className="bg-racing-red text-white font-heading font-black px-8 py-3 rounded-sm text-sm uppercase tracking-tighter hover:bg-white hover:text-racing-red transition-all shadow-lg hover:shadow-racing-red/20"
           >
-            Zapisz się
+            {isEn ? "Contact" : "Zapisz się"}
           </Link>
+          
+          {/* Language Toggle */}
+          <div className="flex items-center gap-2 border-l border-white/10 pl-6 ml-4">
+            <Link 
+              href={pathname.startsWith('/en') ? pathname.replace('/en', '') || '/' : pathname}
+              className={`text-xs font-bold transition-colors ${!pathname.startsWith('/en') ? 'text-racing-red' : 'text-white/40 hover:text-white'}`}
+            >
+              PL
+            </Link>
+            <span className="text-white/10 text-xs">/</span>
+            <Link 
+              href={pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`}
+              className={`text-xs font-bold transition-colors ${pathname.startsWith('/en') ? 'text-racing-red' : 'text-white/40 hover:text-white'}`}
+            >
+              EN
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Toggle */}
@@ -126,15 +153,34 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="font-heading font-black text-xl uppercase text-white/50"
         >
-          Zaloguj
+          {isEn ? "Login" : "Zaloguj"}
         </Link>
         <Link
-          href="/#kontakt"
+          href={isEn ? "/en/#kontakt" : "/#kontakt"}
           onClick={() => setIsOpen(false)}
           className="bg-racing-red text-white font-heading font-black px-10 py-5 rounded-sm text-xl uppercase tracking-widest"
         >
-          Zapisz się
+          {isEn ? "Contact" : "Zapisz się"}
         </Link>
+
+        {/* Mobile Language Toggle */}
+        <div className="flex items-center gap-6 pt-4">
+          <Link 
+            href={pathname.startsWith('/en') ? pathname.replace('/en', '') || '/' : pathname}
+            onClick={() => setIsOpen(false)}
+            className={`text-xl font-black transition-colors ${!pathname.startsWith('/en') ? 'text-racing-red' : 'text-white/40 hover:text-white'}`}
+          >
+            PL
+          </Link>
+          <span className="text-white/10 text-xl font-black">/</span>
+          <Link 
+            href={pathname.startsWith('/en') ? pathname : `/en${pathname === '/' ? '' : pathname}`}
+            onClick={() => setIsOpen(false)}
+            className={`text-xl font-black transition-colors ${pathname.startsWith('/en') ? 'text-racing-red' : 'text-white/40 hover:text-white'}`}
+          >
+            EN
+          </Link>
+        </div>
       </div>
     </nav>
   );
