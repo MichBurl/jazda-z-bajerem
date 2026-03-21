@@ -145,11 +145,34 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
-          <p>{content.rights}</p>
-          <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-white transition-colors">{isEn ? "Privacy Policy" : "Polityka Prywatności"}</Link>
-            <Link href="#" className="hover:text-white transition-colors">{isEn ? "Terms" : "Regulamin"}</Link>
+        <div className="pt-8 border-t border-white/5 space-y-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-white/40">
+            <div className="space-y-1">
+              <p className="font-bold text-white/60">Andrzej Bajer Ośrodek Szkolenia Kierowców BAJER INTERCONTINENTAL</p>
+              <p>OSK BAJER: <span className="text-white/80 font-mono">36 1050 1445 1000 0092 2733 2559</span></p>
+            </div>
+          </div>
+          
+          <div className="pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/60">
+            <p>{content.rights}</p>
+            <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
+              <Link href={`${basePath}${isEn ? '/en' : ''}/polityka-prywatnosci`} className="hover:text-white transition-colors">{isEn ? "Privacy Policy" : "Polityka Prywatności"}</Link>
+              <Link href={`${basePath}${isEn ? '/en' : ''}/regulamin`} className="hover:text-white transition-colors">{isEn ? "Terms" : "Regulamin"}</Link>
+              <Link 
+                href={`${basePath}/policies/Standardy-Ochrony-Maloletnich.pdf`} 
+                target="_blank" 
+                className="hover:text-white transition-colors"
+              >
+                Standard ochrony małoletnich
+              </Link>
+              <Link 
+                href={`${basePath}/policies/Standardy-Ochrony-Maloletnich-wersja-skrocona.pdf`} 
+                target="_blank" 
+                className="hover:text-white transition-colors text-white/40"
+              >
+                (wersja skrócona)
+              </Link>
+            </div>
           </div>
         </div>
       </div>
