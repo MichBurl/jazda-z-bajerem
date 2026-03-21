@@ -59,13 +59,16 @@ export default function RootLayout({
           }
         `}} />
         <script dangerouslySetInnerHTML={{ __html: `
-          window.onload = function() {
-            document.querySelectorAll('link[rel="stylesheet"]').forEach(function(link) {
-              if (link.href.indexOf('static/css') > -1) {
-                link.setAttribute('media', 'all');
+          (function() {
+            var links = document.querySelectorAll('link[rel="stylesheet"]');
+            for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.href.indexOf('static/css') > -1 || link.href.indexOf('chunks') > -1) {
+                link.media = 'print';
+                link.setAttribute('onload', "this.media='all'");
               }
-            });
-          };
+            }
+          })();
         `}} />
       </head>
       <body className="min-h-full flex flex-col font-body bg-asphalt-900 text-off-white">
