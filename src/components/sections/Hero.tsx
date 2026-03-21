@@ -74,7 +74,7 @@ const Hero = () => {
           </div>
           
           {/* Mascot Image - Optimized LCP */}
-          <div className="hidden lg:block absolute -bottom-12 -right-72 w-[90%] h-[126%] z-0 pointer-events-none">
+          <div className="hidden lg:block absolute -bottom-12 -right-120 w-[100%] h-[110%] z-0 pointer-events-none">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/logo_small.webp`}
               alt="Maskotka Bajer"
