@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function TeamEng() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <Section id="team" variant="light" title="Our Professional Crew" subtitle="Instructors">
       <div className="space-y-32">
@@ -19,7 +20,7 @@ export default function TeamEng() {
           <div className="w-full md:w-1/3 shrink-0">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-2xl border-4 border-white">
               <Image
-                src="/images/Team/14/dawid.png"
+                src={`${basePath}/images/Team/14/dawid.png`}
                 alt="Dawid Borkowski"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -58,7 +59,7 @@ export default function TeamEng() {
           <div className="w-full md:w-1/3 shrink-0">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-2xl border-4 border-white">
               <Image
-                src="/images/Team/14/joanna.png"
+                src={`${basePath}/images/Team/14/joanna.png`}
                 alt="Joanna Serejuk"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

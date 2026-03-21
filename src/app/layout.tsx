@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Szkoła Jazdy Kraków Bajer - Prawo Jazdy Szybko i Bezstresowo",
   description: "Szkoła prawa jazdy w Krakowie. Oferujemy kursy ekspresowe (1-1.5 miesiąca), 3 jazdy tygodniowo i naukę na płycie poślizgowej. Zapisz się już dziś!",
   icons: {
-    icon: "/images/logo.webp",
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/logo.webp`,
   },
 };
 

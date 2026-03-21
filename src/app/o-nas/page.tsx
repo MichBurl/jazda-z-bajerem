@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUs() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <main className="pt-20">
       {/* Hero Section */}
@@ -19,7 +20,7 @@ export default function AboutUs() {
       >
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/2-scaled.jpg"
+            src={`${basePath}/images/2-scaled.jpg`}
             alt="Nasza pasja do jazdy"
             fill
             className="object-cover opacity-20 grayscale"
@@ -59,7 +60,7 @@ export default function AboutUs() {
           </div>
           <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border-4 border-white">
             <Image
-              src="/images/2-scaled.jpg"
+              src={`${basePath}/images/2-scaled.jpg`}
               alt="Jazda z pasją"
               fill
               className="object-cover"

@@ -5,12 +5,13 @@ import Button from "../Button";
 import { motion } from "framer-motion";
 
 export default function CTA() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <section id="zapisz-sie" className="relative py-24 md:py-40 overflow-hidden bg-asphalt-900 px-4 md:px-6">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/lusterko1.jpg"
+          src={`${basePath}/images/lusterko1.jpg`}
           alt="Twoja droga do prawa jazdy"
           fill
           className="object-cover opacity-20 grayscale"

@@ -36,7 +36,8 @@ export default function Footer() {
         ]
   };
 
-  const logoSrc = isEn ? "/images/eng-images/logo-eng.webp" : "/images/logo.webp";
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const logoSrc = isEn ? `${basePath}/images/eng-images/logo-eng.webp` : `${basePath}/images/logo.webp`;
 
   return (
     <footer className="bg-asphalt-900 text-white pt-16 pb-8 border-t border-white/5">

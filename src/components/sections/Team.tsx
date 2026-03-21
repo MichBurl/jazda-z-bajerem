@@ -5,25 +5,27 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Award, Shield, UserCheck } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const TEAM = [
   {
     name: "Andrzej Bajer",
     role: "Instruktor Nauki Jazdy / Założyciel",
-    image: "/images/Team/14/andrzej-bajer.png",
+    image: `${basePath}/images/Team/14/andrzej-bajer.png`,
     description: "Instruktor z wieloletnim stażem, uczy od lat 90. Znany ze spokoju i anielskiej cierpliwości. Zawsze uśmiechnięty, tłumaczy wszelkie zawiłości ruchu drogowego bez stresu.",
     icon: <Award className="w-5 h-5 text-racing-red" />,
   },
   {
     name: "Joanna Serejuk",
     role: "Specjalistka ds. Administracyjnych",
-    image: "/images/Team/14/joanna.png",
+    image: `${basePath}/images/Team/14/joanna.png`,
     description: "Dba o to, żeby wszystko w Bajerze działało jak w zegarku. Twoja osobista przewodniczka – przypomni Ci o jazdach i poprowadzi przez formalności jak mama na wycieczkę szkolną.",
     icon: <Shield className="w-5 h-5 text-racing-red" />,
   },
   {
     name: "Dawid Borkowski",
     role: "Instruktor Nauki Jazdy",
-    image: "/images/Team/14/dawid.png",
+    image: `${basePath}/images/Team/14/dawid.png`,
     description: "Młody i ambitny instruktor, który z zapałem podchodzi do pracy. Specjalizuje się w trudnych przypadkach – dla niego nie ma kursanta, którego nie da się nauczyć jeździć.",
     icon: <UserCheck className="w-5 h-5 text-racing-red" />,
   },
